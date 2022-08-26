@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faClock, faPhone, faEnvelope, faLocationDot, faChevronRight,
      faLock, faRibbon, faGraduationCap, faCertificate ,
-    faArrowRight, faQuoteRight
+    faArrowRight, faQuoteRight, faChevronUp
     } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faClock);
@@ -20,6 +20,8 @@ library.add(faGraduationCap);
 library.add(faCertificate);
 library.add(faArrowRight);
 library.add(faQuoteRight);
+library.add(faChevronUp);
+
 
 
 createApp(App).component("fonts-icon", FontAwesomeIcon).use(store).use(router).mount('#app')

@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div id="header" class="header">
     <div class="contact-bar py-3">
         <div class="row flex-between">
           <div class="flex text-cap">
@@ -9,7 +9,11 @@
           <div class="flex">
             <p><fonts-icon icon="phone" class="mr-1"/>+1(305) 1234-5678</p>
             <p class="mx-4"><fonts-icon icon="envelope" class="mr-1"/>hello@example.com</p>
-            <div class="flex">social icons</div>
+            <div class="flex social-icons">
+              <img src="@/assets/images/fb.png" class="social-icon" alt="">
+              <img src="@/assets/images/twitter.png" class="social-icon" alt="">
+              <img src="@/assets/images/linkedin.png" class="social-icon" alt="">
+              </div>
           </div>
         </div>
     </div>
@@ -17,13 +21,13 @@
       <div class="navbar row py-3 flex-between">
         <img src="@/assets/images/nexgen-logo.svg" alt="logo" class="logo">
         <ul class="items flex">
-          <li class="item mr-4 "><router-link to="#" class="text-up">home</router-link></li>
-          <li class="item mr-4 text-up"><router-link to="#">about</router-link></li>
-          <li class="item mr-4 text-up"><router-link to="#">services</router-link></li>
-          <li class="item mr-4 text-up"><router-link to="#">process</router-link></li>
-          <li class="item mr-4 text-up"><router-link to="#">team</router-link></li>
-          <li class="item mr-4 text-up"><router-link to="#">blog</router-link></li>
-          <li class="item text-up btn">get in touch</li>
+          <li class="item mr-4 text-up" @click="go('header')">home</li>
+          <li class="item mr-4 text-up" @click="go('about')">about</li>
+          <li class="item mr-4 text-up" @click="go('services')">services</li>
+          <li class="item mr-4 text-up" @click="go('processManagement')">process</li>
+          <li class="item mr-4 text-up" @click="go('teamExpert')">team</li>
+          <li class="item mr-4 text-up" @click="go('latestNews')">blog</li>
+          <li class=" text-up btn" @click="go('newsLetter')">get in touch</li>
         </ul>
       </div>
       <div class="flex-end h-100 row">
@@ -53,7 +57,11 @@
 
 <script>
 export default {
-
+  methods:{
+    go(id){
+      document.getElementById(id).scrollIntoView();
+    }
+  }
 }
 </script>
 
@@ -66,6 +74,12 @@ export default {
   background-color: #3d4955;
   color: #e8ecea;
   font-size: 14px;
+  .social-icons{
+    .social-icon{
+      width: 20px;
+      margin-right: 10px;
+    }
+  }
 }
 
 .hero{
@@ -85,14 +99,15 @@ export default {
       list-style: none;
       align-items: center;
 
-      .item a{
+      .item{
         text-decoration: none;
         color: #1c2224;
         transition: all .25s;
-      }
-      .item:hover a{
+        cursor: pointer;
+        &:hover{
           color: #048383;
           font-weight: 500;
+      }
       }
     }
   }
@@ -142,6 +157,7 @@ export default {
   transition: all .2s;
   &:hover{
     background-color: #007777;
+    color: #fff;
   }
 }
 .readmore-btn{

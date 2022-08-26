@@ -10,7 +10,7 @@
          <div class="cards">
             <div class="card" v-for="card in cards" :key="card">
                 <span class="right-arrow"><fonts-icon icon="arrow-right"/></span>
-                <p class="icon">{{card.iconSrc}}</p>
+                <img :src="require(`@/assets/images/${card.iconSrc}`)" class="icon" alt="">
                 <p class="heading">{{card.heading}}</p>
                 <p class="snippet">{{card.snippet}}</p>
             </div>
@@ -26,32 +26,32 @@ export default {
         return{
             cards:[
                 {
-                    iconSrc:'icon to be add',
+                    iconSrc:'service-1.png',
                     heading:'Audit & assurance',
                     snippet:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, adipisci!'  
                 },
                 {
-                    iconSrc:'icon to be add',
+                    iconSrc:'service-2.png',
                     heading:'financial advisory',
                     snippet:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, adipisci!'  
                 },
                 {
-                    iconSrc:'icon to be add',
+                    iconSrc:'service-3.png',
                     heading:'analytics and M&A',
                     snippet:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, adipisci!'  
                 },
                 {
-                    iconSrc:'icon to be add',
+                    iconSrc:'service-4.png',
                     heading:'middle marketing',
                     snippet:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, adipisci!'  
                 },
                 {
-                    iconSrc:'icon to be add',
+                    iconSrc:'service-5.png',
                     heading:'legal consulting',
                     snippet:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, adipisci!'  
                 },
                 {
-                    iconSrc:'icon to be add',
+                    iconSrc:'service-6.png',
                     heading:'regulatory risk',
                     snippet:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, adipisci!'  
                 },
@@ -126,7 +126,7 @@ export default {
                 color: #048383;
             }
             .icon{
-                color: #048383;
+                width: 35px;
             }
             .heading{
                 line-height: 40px;

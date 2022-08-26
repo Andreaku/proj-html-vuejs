@@ -12,7 +12,9 @@
                         <p class="name">{{card.name}}</p>
                         <p class="designation">{{card.designation}}</p>
                         <div class="social-icons flex">
-                            icons
+                            <img src="@/assets/images/fb.png" class="social-icon" alt="">
+                            <img src="@/assets/images/twitter.png" class="social-icon" alt="">
+                            <img src="@/assets/images/linkedin.png" class="social-icon" alt="">
                         </div>
                     </div>
                 </div>
@@ -108,6 +110,10 @@ export default {
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
+                        .social-icon{
+                            width: 20px;
+                            margin-right: 10px;
+                        }
                     }
                 }
 
